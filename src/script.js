@@ -1,6 +1,6 @@
 CanvasRenderingContext2D.prototype.cls = function(color){
     this.fillStyle = color;
-    this.fillRect(0, 0, WIDTH, HEIGHT);
+    this.fillRect(0, 0, this.canvas.width, this.canvas.height);
 }
 
 CanvasRenderingContext2D.prototype.circle = function(x,y,r){
