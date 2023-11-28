@@ -10,15 +10,20 @@ CanvasRenderingContext2D.prototype.circle = function(x,y,r){
     this.stroke();
 }
 
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext("2d");
-
-ctx.cls("black");
-ctx.strokeStyle = "blue";
-ctx.circle(WIDTH/2,HEIGHT/2,HEIGHT/2);
-
 const WIDTH = 0;
 const HEIGHT = 0;
+
+document.addEventListener('DOMContentLoaded',()=>{
+    resize();
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext("2d");
+    
+    ctx.cls("black");
+    ctx.strokeStyle = "blue";
+    ctx.circle(WIDTH/2,HEIGHT/2,HEIGHT/2);
+})
+
 
 
 function resize(){
@@ -27,11 +32,6 @@ function resize(){
     canvas.width = WIDTH;
     canvas.height = HEIGHT;
 }
-
-resize();
-
-
-
 
 window.addEventListener("resize",()=>resize());
 
