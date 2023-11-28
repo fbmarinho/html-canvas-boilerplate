@@ -19,12 +19,12 @@ function resize(){
 resize();
 
 
-CanvasRenderingContext2D.prototype.cls = function(color){
+CanvasRenderingContext2D.prototype.cls = (color)=>{
     this.fillStyle = color;
     this.fillRect(0, 0, WIDTH, HEIGHT);
 }
 
-CanvasRenderingContext2D.prototype.circle = function(x,y,r){
+CanvasRenderingContext2D.prototype.circle = (x,y,r)=>{
     this.beginPath();
     this.arc(x, y, r, 0, 2 * Math.PI);
     this.closePath();
