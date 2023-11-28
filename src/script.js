@@ -1,4 +1,4 @@
-const canvas = document.getElementsByClassName('canvas')[0];
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext("2d");
 
 ctx.cls("black");
